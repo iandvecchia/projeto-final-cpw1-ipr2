@@ -1,0 +1,50 @@
+/* =============================
+Sessão Listagem de Albums
+================================ */
+.colecao-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 12px;
+}
+
+
+.colecao-lista-wrap { 
+    display: grid; 
+    gap: var(--space-3, 1rem); 
+}
+
+#titulo-colecao-lista { 
+    margin: 0; 
+}
+
+
+/* Imagem grande ocupando toda a largura do card */
+.colecao-lista .card-produto-imagem {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;   /* quadrado bonito */
+  object-fit: cover;     /* corta para preencher */
+  border-radius: 8px;
+}
+
+
+/* área dos botões */
+.colecao-lista .produto-card-acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ambos ocupam toda a largura, lado a lado */
+.colecao-lista .produto-card-acoes .btn {
+  flex: 1 1 0;
+}
+
+
+/* mobile: empilha */
+@media (max-width: 420px) {
+  .colecao-lista .produto-card-acoes {
+    flex-direction: column;
+  }
+}

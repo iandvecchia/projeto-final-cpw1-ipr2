@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Lib - Listas de Favoritos</title>
+    <link rel="icon" href="assets/img/logos/favicon.png" />
+    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <link rel="stylesheet" href="assets/css/pages/market.css" />
+</head>
+<body>
+    <header>
+    <div class="cabecalho-site" role="banner">
+      <div class="container cabecalho-site">
+        <a class="cabecalho-site-marca" href="pagina_inicial.html" aria-label="Pagina Inicial">
+          <img src="assets/img/logos/logo.svg" alt="Logo do Music Lib" class="cabecalho-site-logo" />
+          <span class="cabecalho-site-title">A sua biblioteca de CDs e Vinis.</span>
+        </a>
+
+        <nav class="nav-site" aria-label="navegação entre páginas">
+          <ul class="site-nav-list">
+            <li><a class="site-nav-link" href="pagina_inicial.html">Início</a></li>
+            <li><a class="site-nav-link ativo" href="mercado.html">Mercado</a></li>
+            <li><a class="site-nav-link" href="colecao.html">Minha Coleção</a></li>
+            <li><a class="site-nav-link" href="favoritos.html">Lista de Desejos</a></li>
+          </ul>
+        </nav>
+
+        <div class="cabecalho-site-acoes">
+          <a class="btn btn--ghost" href="login.html" aria-label="Entrar">Entrar</a>
+          <a class="btn btn--primary" href="cart.html" aria-label="Ver Carrinho">Carrinho</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+   <!-- CONTEÚDO PRINCIPAL -->
+  <main id="conteudo" class="site-main" tabindex="-1">
+
+    <!-- LISTAGEM DE ÁLBUNS -->
+    <section class="mercado-lista" aria-labelledby="titulo-mercado-lista">
+      <div class="container mercado-lista-wrap">
+        <h2 id="titulo-mercado-lista" class="titulo-secao">Meus Favoritos</h2>
+
+
+        <div class="grid-albuns" data-js="album-list">
+          <!-- 20 itens de exemplo -->
+
+          <article class="card-produto">
+            <a class="card-produto-link" href="album.html?id=1">
+              <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1"
+                loading="lazy" />
+              <div class="card-produto-corpo">
+                <h3 class="produto-card-titulo">Exemplo de Álbum 1</h3>
+                <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
+                <p class="produto-card-preco">Preço médio: R$ 89,90</p>
+
+                <div class="produto-card-acoes">
+                  <button class="btn btn--primary">Comprar</button>
+                  <button class="btn btn--ghost">Adicionar a coleção</button>
+                </div>
+              </div>
+            </a>
+          </article>
+          </div>
+          </div>
+          </section>
+
+
+
+
+  </main>
+    <!--Rodapé-->
+  <footer class="site-footer" role="contentinfo" style="background-color: rgb(0, 0, 0);">
+    <div class="container site-footer-grid">
+      <section class="footer-col">
+        <h3 class="footer-col-titulo">Biblioteca de Discos</h3>
+        <p class="footer-col-texto">Sua plataforma para buscar, comprar e organizar coleções de CDs e Vinis</p>
+
+      </section>
+
+      <nav class="footer-col" aria-label="Links Uteis">
+        <h3 class="footer-col-titulo">Navegação</h3>
+        <ul class="footer-links">
+          <li><a href="mercado.html">Mercado</a></li>
+          <li><a href="colecao.html">Minha Coleção</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+          <li><a href="login.html">Entrar</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-col">
+        <h3 class="footer-col-titulo">Contato</h3>
+        <ul class="footer-links">
+          <li><a href="#">Suporte</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+
+        </ul>
+      </section>
+      <div class="site-footer-bottom">
+        <div class="container">
+          <p class="site-footer-copy">@musiclib - <span data-js="year"></span> - IFRS</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+ 
+</body>
+</html>
