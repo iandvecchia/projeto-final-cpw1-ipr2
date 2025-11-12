@@ -1,0 +1,150 @@
+/*
+Music Lib — disc.css (página do álbum)
+Foco: POSICIONAMENTO/GRID. Visual simples, herda botões/inputs da base.
+*/
+
+
+/* =============================
+HERO DO PRODUTO (imagem | infos)
+================================ */
+.produto-hero { 
+    padding: 32px 0; 
+}
+
+
+
+.produto-hero-wrap {
+    display: grid;
+    grid-template-columns: 420px 1fr; /* imagem | infos */
+    gap: 24px;
+    align-items: start;
+}
+
+/* Imagem grande do álbum */
+.produto-img { 
+    position: relative; 
+}
+
+.produto-img-media {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* quadrado */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Texto/infos do produto */
+.produto-info { 
+    display: grid; gap: 10px; 
+}
+.produto-titulo { 
+    margin: 0; 
+}
+.produto-meta { 
+    margin: 0; 
+    color: #555; 
+}
+.produto-descricao { 
+    margin: 0; 
+}
+
+/* CTAs principais */
+.produto-acoes { display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    margin-top: 6px; 
+}
+
+/* Responsivo do hero */
+@media (max-width: 900px) {
+    .produto-hero-wrap { 
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* =============================
+OFERTAS / LOJAS
+================================ */
+
+.produto-ofertas { 
+    padding: 28px 0; 
+    background: var(--surface, #f7f7f8); 
+}
+
+
+
+.lojas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 1000px) {
+.lojas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+.lojas-grid { grid-template-columns: 1fr; }
+}
+
+.loja-card { 
+    background: #fff; 
+    border: 1px solid #eee; 
+    border-radius: 10px; 
+    padding: 14px; 
+    display: grid; 
+    gap: 6px; 
+}
+.loja-nome { 
+    margin: 0 0 2px; 
+    font-size: 1.05rem; 
+}
+.loja-info, .loja-preco { 
+    margin: 0; 
+}
+.loja-acoes { 
+    display: flex; 
+    gap: 8px; 
+    margin-top: 6px; 
+}
+.loja-acoes .btn { 
+    flex: 1 1 0; 
+}
+
+/* =============================
+DETALHES (faixas | notas | créditos)
+================================ */
+
+.produto-detalhes { 
+    padding: 28px 0; 
+}
+
+.produto-detalhes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* faixas maior | notas | créditos */
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+.produto-detalhes-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+.produto-detalhes-grid { grid-template-columns: 1fr; }
+}
+
+
+
+/* listas básicas */
+.faixas-lista { 
+    margin: 8px 0 0; 
+    padding-left: 20px; 
+}
+.creditos-lista { 
+    margin: 8px 0 0; 
+    padding-left: 18px;
+
+}
+
+
+/* títulos internos */
+.produto-detalhes h3 {
+     margin: 0 0 8px; 
+}

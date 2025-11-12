@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Lib - A sua biblioteca de CDS e Vinis</title>
+    <meta name="description" content="Acervo digital, e-commerce e gerenciador de coleção de CDs e Vinis."/>
+    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <!-- Icone favorito (favicon) -->
+    <link rel="icon" href="assets/img/logos/favicon.png"/>
+</head>
+<body>
+    <!--Header/Navegação Principal: -->
+    <header>
+        <div class="cabecalho-site" role="banner">
+            <div class="container cabecalho-site" >
+                <a class="cabecalho-site-marca" href="pagina_inicial.html" aria-label="Pagina Inicial">
+                    <img src="assets/img/logos/logo.svg" alt="Logo do Music Lib" class="cabecalho-site-logo">
+                    <span class="cabecalho-site-title">A sua biblioteca de CDs e Vinis.</span>
+                </a>
+
+                <nav class="nav-site" aria-label="navegação entre páginas">
+                    <ul class="site-nav-list">
+                        <li><a class="site-nav-link ativo" href="pagina_inicial.html">Inicio</a></li>
+                        <li><a class="site-nav-link" href="mercado.html">Mercado</a></li>
+                        <li><a class="site-nav-link" href="colecao.html">Minha Coleção</a></li>
+                        <li><a class="site-nav-link" href="favoritos.html">Lista de Desejos</a></li>
+
+                    </ul>
+                </nav>
+
+                <div class="cabecalho-site-acoes">
+                    <a class="btn btn--ghost" href="login.html" aria-label="Entrar">Entrar</a>
+                    <a class="btn btn--primary" href="cart.html" aria-label="Ver Carrinho"> Carrinho</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo" class="site-main" tabindex="-1"> <!--tab index -1 define a navegação via teclado. importante para acessibilidade -->
+        <!-- Banner Principal: -->
+         <section class="hero" aria-labelledby="hero-title"> <!--“Hero Section”, usada no design web para indicar o primeiro grande bloco visual que aparece no topo de uma página — normalmente logo abaixo do menu.-->
+            <div class="container hero-wrap">
+                <div class="hero-conteudo">
+                    <h1 id="hero-titulo" class="hero-title">Sua biblioteca de CDS e Vinis.</h1>
+                    <p class="hero-subtitulo"> Busque, compre e organize sua coleção - tudo em um só lugar.</p>
+                </div>
+
+                <div class="hero-acao">
+                    <a class="btn btn--primary" href="#busca">Comecar Agora</a>
+                    <a class="btn btn--ghost" href="mercado.html">Ir ao mercado</a>
+                </div>
+            </div>
+         </section>
+
+         <!--Area de busca por tipo (CDs, Vinis ou outras funcionalidades)-->
+         <section class="busca-tipo" aria-labelledby="busca-tipo-titulo" id="busca">
+            <div class="container">
+                <h2 id="busca-tipos-titulo" class="sessao-titulo">Encontre o seu próximo disco: </h2>
+                <form class="barra-busca" role="busca" aria-label="busca rápida" data-js="quick-seach-form">
+                    <label for="q" class="visualizacao-escondida">Busca por artista album ou faixa.</label>
+                    <input id="q" name="q" class="input input-busca" type="busca" placeholder="Busca por artista album ou faixa." autocomplete="off"/>
+                    <button class="btn btn--primary" type="submit">Buscar</button>
+                </form>
+
+                <div class="busca-tipos-grid">
+                    <a class="card card-action" href="mercado.html?tipo=cd" data-js="link-cds">
+                        <div class="card-media"><img src="assets/img/banners/cds.jpg" alt="cds" loading="lazy"/></div>
+                        <div class="card-corpo">
+                            <h3 class="titlo-card">Busca por CDs</h3>
+                            <p class="texto-card">Explore lancamentos, clássicos e edições especiais.</p>
+                        </div>
+                    </a>
+
+                     <a class="card card-action" href="mercado.html?tipo=vinil" data-js="link-vinis">
+                        <div class="card-media"><img src="assets/img/banners/vinis.jpg" alt="vinis" loading="lazy"/></div>
+                        <div class="card-corpo">
+                            <h3 class="titlo-card">Busca por Vinis</h3>
+                            <p class="texto-card">Explore clássicos e coleções vintage.</p>
+                        </div>
+                    </a>
+
+                    <a class="card card-action" href="mercado.html?tipo=outros" data-js="link-outros">
+                        <div class="card-media"><img src="assets/img/banners/fitas.jpg" alt="vinis" loading="lazy"/></div>
+                        <div class="card-corpo">
+                            <h3 class="titlo-card">Outras funcionalidades</h3>
+                            <p class="texto-card">Acesse ferramentas para organizar e avaliar a sua coleção.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+         </section>
+
+         <!-- Mais vendidos (versão carrossel) -->
+    <article class="bloco-listas carrossel container" aria-labelledby="mais-vendidos-titulo" data-js="carrossel">
+        <header class="bloco-listas-cabecalho" style="position:relative;">
+        <h3 id="mais-vendidos-titulo" class="bloco-listas-titulo">Mais vendidos</h3>
+
+        <!-- botões do carrossel -->
+            <button class="carrossel-botao prev" aria-label="Voltar">◀</button>
+        <button class="carrossel-botao next" aria-label="Avançar">▶</button>
+        </header>
+        
+        <!-- viewport e trilha -->
+        <div class="carrossel-viewport" tabindex="0">
+            <ul class="carrossel-trilha">
+            <!-- Card 1 -->
+            <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=1">
+            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">Álbum Exemplo 1</h4>
+                <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
+                <p class="produto-card-preco">Preço médio: R$ 79,90</p>
+            </div>
+            </a>
+        </li>
+
+        <!-- Duplique estes <li> para mais itens -->
+        <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=2">
+            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
+                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
+                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+            </div>
+            </a>
+        </li>
+
+        <!-- ...outros itens -->
+        </ul>
+    </div>
+
+    <!-- indicadores (bolinhas) -->
+    <div class="carrossel-indicadores" aria-hidden="true"></div>
+    </article>
+
+
+
+    <!-- Mais vendidos (versão carrossel) -->
+    <article class="bloco-listas carrossel container" aria-labelledby="classicos-titulo" data-js="carrossel">
+        <header class="bloco-listas-cabecalho" style="position:relative;">
+        <h3 id="classicos-titulo" class="bloco-listas-titulo">Classicos</h3>
+
+        <!-- botões do carrossel -->
+            <button class="carrossel-botao prev" aria-label="Voltar">◀</button>
+        <button class="carrossel-botao next" aria-label="Avançar">▶</button>
+        </header>
+        
+        <!-- viewport e trilha -->
+        <div class="carrossel-viewport" tabindex="0">
+            <ul class="carrossel-trilha">
+            <!-- Card 1 -->
+            <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=1">
+            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">Álbum Exemplo 1</h4>
+                <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
+                <p class="produto-card-preco">Preço médio: R$ 79,90</p>
+            </div>
+            </a>
+        </li>
+
+        <!-- Duplique estes <li> para mais itens -->
+        <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=2">
+            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
+                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
+                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+            </div>
+            </a>
+        </li>
+
+        <!-- ...outros itens -->
+        </ul>
+    </div>
+
+    <!-- indicadores (bolinhas) -->
+    <div class="carrossel-indicadores" aria-hidden="true"></div>
+    </article>
+
+
+    <!-- Mais procurados(versão carrossel) -->
+    <article class="bloco-listas carrossel container" aria-labelledby="mais-procudados-titulo" data-js="carrossel">
+        <header class="bloco-listas-cabecalho" style="position:relative;">
+        <h3 id="mais-procurados-titulo" class="bloco-listas-titulo">Mais procurados</h3>
+
+        <!-- botões do carrossel -->
+            <button class="carrossel-botao prev" aria-label="Voltar">◀</button>
+        <button class="carrossel-botao next" aria-label="Avançar">▶</button>
+        </header>
+        
+        <!-- viewport e trilha -->
+        <div class="carrossel-viewport" tabindex="0">
+            <ul class="carrossel-trilha">
+            <!-- Card 1 -->
+            <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=1">
+            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">Álbum Exemplo 1</h4>
+                <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
+                <p class="produto-card-preco">Preço médio: R$ 79,90</p>
+            </div>
+            </a>
+        </li>
+
+        <!-- Duplique estes <li> para mais itens -->
+        <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=2">
+            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
+                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
+                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+            </div>
+            </a>
+        </li>
+
+        <!-- ...outros itens -->
+        </ul>
+    </div>
+
+    <!-- indicadores (bolinhas) -->
+    <div class="carrossel-indicadores" aria-hidden="true"></div>
+    </article>
+
+
+        
+          <!-- Newsletter / Micro banner -->
+           <section class="newsletter" aria-labelledby="titulo-newsletter">
+            <div class="container newsletter-wrap">
+                <div class="newsletter-content">
+                    <h2 id="newsletter-titulo" class="titulo-secao"> Assine a newsletter</h2>
+                    <p class="newsletter-texto"> Receba novidades, promoções e listas curadas de CDs e Vinis</p>
+                </div>
+
+                <form class="newsletter-formulario" data-js="newsletter-form">
+                    <label for="email" class="visually-hidden">Seu E-mail</label>
+                    <input id="email" name="email" class="input" type="email" placeholder="Seu e-mail" required>
+                    <button class="btn btn--primary" type="submit">Assinar</button>
+                </form>
+            </div>
+           </section>
+
+    <!--Rodapé-->
+    <footer class="site-footer" role="contentinfo" style="background-color: rgb(0, 0, 0);">
+        <div class="container site-footer-grid">
+            <section class="footer-col">
+                <h3 class="footer-col-titulo">Biblioteca de Discos</h3>
+                <p class="footer-col-texto">Sua plataforma para buscar, comprar e organizar coleções de CDs e Vinis</p>
+
+            </section>
+
+            <nav class="footer-col" aria-label="Links Uteis">
+                <h3 class="footer-col-titulo">Navegação</h3>
+                <ul class="footer-links">
+                    <li><a href="mercado.html">Mercado</a></li>
+                    <li><a href="colecao.html">Minha Coleção</a></li>
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-col">
+                <h3 class="footer-col-titulo">Contato</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+
+                </ul>
+            </section>
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <p class="site-footer-copy">@musiclib - <span data-js="year"></span> - IFRS</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    </main>
+
+    <!-- Scripts -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/carrossel.js" defer></script>
+  <script>
+    // Ganchos mínimos até termos JS real
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.querySelector('[data-js="year"]');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
+
+
+    
+</body>
+</html>

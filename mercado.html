@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Lib - Mercado</title>
+    <meta name="description" content="Busque e compre CDs e Vinis no Music Lib." />
+    <link rel="icon" href="assets/img/logos/favicon.png" />
+    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <link rel="stylesheet" href="assets/css/pages/market.css" />
+</head>
+<body>
+    <!-- HEADER -->
+  <header>
+    <div class="cabecalho-site" role="banner">
+      <div class="container cabecalho-site">
+        <a class="cabecalho-site-marca" href="pagina_inicial.html" aria-label="Pagina Inicial">
+          <img src="assets/img/logos/logo.svg" alt="Logo do Music Lib" class="cabecalho-site-logo" />
+          <span class="cabecalho-site-title">A sua biblioteca de CDs e Vinis.</span>
+        </a>
+
+        <nav class="nav-site" aria-label="navegação entre páginas">
+          <ul class="site-nav-list">
+            <li><a class="site-nav-link" href="pagina_inicial.html">Início</a></li>
+            <li><a class="site-nav-link ativo" href="mercado.html">Mercado</a></li>
+            <li><a class="site-nav-link" href="colecao.html">Minha Coleção</a></li>
+            <li><a class="site-nav-link" href="favoritos.html">Lista de Desejos</a></li>
+          </ul>
+        </nav>
+
+        <div class="cabecalho-site-acoes">
+          <a class="btn btn--ghost" href="login.html" aria-label="Entrar">Entrar</a>
+          <a class="btn btn--primary" href="cart.html" aria-label="Ver Carrinho">Carrinho</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="conteudo" class="site-main" tabindex="-1">
+
+    <!-- FILTRO HORIZONTAL -->
+  <section class="mercado-filtros" aria-labelledby="titulo-mercado-filtros">
+    <div class="container mercado-filtros-wrap" style="grid-template-columns: 1fr;">
+    <h1 id="titulo-mercado-filtros" class="titulo-secao">Mercado de CDs e Vinis</h1>
+
+
+    <form class="filtros-horizontais" role="search" aria-label="Filtro e busca do mercado" data-js="market-search">
+    <label for="f_q" class="visually-hidden">Nome do artista ou álbum</label>
+    <input id="f_q" name="q" class="input" type="search" placeholder="Buscar por artista ou álbum" autocomplete="off" />
+
+
+    <label for="f_genero" class="visually-hidden">Estilo musical</label>
+    <select id="f_genero" name="genero" class>
+    <option value="">Todos os estilos</option>
+    <option>Rock</option>
+    <option>Rap</option>
+    <option>Pop</option>
+    <option>Samba</option>
+    </select>
+
+
+    <label for="f_formato" class="visually-hidden">Formato</label>
+    <select id="f_formato" name="formato" class>
+    <option value="">Todos os formatos</option>
+    <option value="cd">CD</option>
+    <option value="vinil">Vinil</option>
+    </select>
+      <button class="btn btn--primary" type="submit">Buscar</button>
+    </form>
+</div>
+</section>
+
+<!-- LISTAGEM DE ÁLBUNS -->
+  <section class="mercado-lista" aria-labelledby="titulo-mercado-lista">
+  <div class="container mercado-lista-wrap">
+  <h2 id="titulo-mercado-lista" class="titulo-secao">Álbuns disponíveis</h2>
+
+
+  <div class="grid-albuns" data-js="album-list">
+  <!-- 20 itens de exemplo -->
+
+  <article class="card-produto">
+    <a class="card-produto-link" href="album.html?id=1">
+    <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
+    <div class="card-produto-corpo">
+    <h3 class="produto-card-titulo">Exemplo de Álbum 1</h3>
+    <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
+    <p class="produto-card-preco">Preço médio: R$ 89,90</p>
+
+   <div class="produto-card-acoes">
+      <button class="btn btn--primary">Comprar</button>
+      <button class="btn btn--ghost">Adicionar aos favoritos</button>
+    </div>
+</div>
+</a>
+</article>
+
+
+<article class="card-produto">
+<a class="card-produto-link" href="album.html?id=2">
+<img class="card-produto-imagem" src="assets/img/albums/placeholder-2.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+<div class="card-produto-corpo">
+<h3 class="produto-card-titulo">Exemplo de Álbum 2</h3>
+<p class="produto-card-meta">Artista Exemplo • 1998 • US</p>
+<p class="produto-card-preco">Preço médio: R$ 129,00</p>
+</div>
+</a>
+</article>
+
+
+<article class="card-produto">
+<a class="card-produto-link" href="album.html?id=3">
+<img class="card-produto-imagem" src="assets/img/albums/placeholder-3.jpg" alt="Capa do álbum Exemplo 3" loading="lazy" />
+<div class="card-produto-corpo">
+<h3 class="produto-card-titulo">Exemplo de Álbum 3</h3>
+<p class="produto-card-meta">Artista Exemplo • 1978 • UK</p>
+<p class="produto-card-preco">Preço médio: R$ 199,00</p>
+</div>
+</a>
+</article>
+
+
+<article class="card-produto">
+<a class="card-produto-link" href="album.html?id=4">
+<img class="card-produto-imagem" src="assets/img/albums/placeholder-1.jpg" alt="Capa do álbum Exemplo 4" loading="lazy" />
+<div class="card-produto-corpo">
+<h3 class="produto-card-titulo">Exemplo de Álbum 4</h3>
+<p class="produto-card-meta">Artista Exemplo • 2005 • BR</p>
+<p class="produto-card-preco">Preço médio: R$ 59,90</p>
+</div>
+</a>
+</article>
+
+
+ <article class="card-produto">
+      <a class="card-produto-link" href="album.html?id=6">
+        <img class="card-produto-imagem" src="assets/img/albums/placeholder-3.jpg" alt="Capa do álbum Exemplo 6" loading="lazy" />
+        <div class="card-produto-corpo">
+          <h3 class="produto-card-titulo">Exemplo de Álbum 6</h3>
+          <p class="produto-card-meta">Artista Exemplo • 1980 • UK</p>
+          <p class="produto-card-preco">Preço médio: R$ 219,00</p>
+        </div>
+      </a>
+    </article>
+
+
+    <article class="card-produto">
+      <a class="card-produto-link" href="album.html?id=6">
+        <img class="card-produto-imagem" src="assets/img/albums/placeholder-3.jpg" alt="Capa do álbum Exemplo 6" loading="lazy" />
+        <div class="card-produto-corpo">
+          <h3 class="produto-card-titulo">Exemplo de Álbum 7</h3>
+          <p class="produto-card-meta">Artista Exemplo • 1980 • UK</p>
+          <p class="produto-card-preco">Preço médio: R$ 219,00</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="card-produto">
+      <a class="card-produto-link" href="album.html?id=6">
+        <img class="card-produto-imagem" src="assets/img/albums/placeholder-3.jpg" alt="Capa do álbum Exemplo 6" loading="lazy" />
+        <div class="card-produto-corpo">
+          <h3 class="produto-card-titulo">Exemplo de Álbum 8</h3>
+          <p class="produto-card-meta">Artista Exemplo • 1980 • UK</p>
+          <p class="produto-card-preco">Preço médio: R$ 219,00</p>
+        </div>
+      </a>
+    </article>
+
+<article class="card-produto">
+<a class="card-produto-link" href="album.html?id=6">
+<img class="card-produto-imagem" src="assets/img/albums/placeholder-3.jpg" alt="Capa do álbum Exemplo 6" loading="lazy" />
+<div class="card-produto-corpo">
+<h3 class="produto-card-titulo">Exemplo de Álbum 8</h3>
+<p class="produto-card-meta">Artista Exemplo • 1980 • UK</p>
+<p class="produto-card-preco">Preço médio: R$ 219,00</p>
+</div>
+</a>
+</article>
+
+
+
+
+
+
+
+  </div>
+
+    <!-- Paginação -->
+    <nav class="paginacao" aria-label="Navegação de páginas">
+      <ul class="paginacao-lista">
+          <li><a href="#" class="paginacao-link ativo">1</a></li>
+          <li><a href="#" class="paginacao-link">2</a></li>
+          <li><a href="#" class="paginacao-link">3</a></li>
+          <li><a href="#" class="paginacao-link">Próximo »</a></li>
+      </ul>
+    </nav>
+    </div>
+    </section>
+    </main>
+
+
+
+
+  
+  
+ <!--Rodapé-->
+    <footer class="site-footer" role="contentinfo" style="background-color: rgb(0, 0, 0);">
+        <div class="container site-footer-grid">
+            <section class="footer-col">
+                <h3 class="footer-col-titulo">Biblioteca de Discos</h3>
+                <p class="footer-col-texto">Sua plataforma para buscar, comprar e organizar coleções de CDs e Vinis</p>
+
+            </section>
+
+            <nav class="footer-col" aria-label="Links Uteis">
+                <h3 class="footer-col-titulo">Navegação</h3>
+                <ul class="footer-links">
+                    <li><a href="mercado.html">Mercado</a></li>
+                    <li><a href="colecao.html">Minha Coleção</a></li>
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-col">
+                <h3 class="footer-col-titulo">Contato</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+
+                </ul>
+            </section>
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <p class="site-footer-copy">@musiclib - <span data-js="year"></span> - IFRS</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+  <!-- Scripts -->
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.querySelector('[data-js=\"year\"]');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

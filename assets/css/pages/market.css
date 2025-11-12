@@ -1,0 +1,146 @@
+/*
+Music Lib ? mercado.css
+Objetivo: Adequar POSICIONAMENTO (layout) da p�gina mercado.html,
+mantendo coer�ncia com pagina_inicial.css. Sem design pesado; foco em grid/fluxo.
+
+
+Se apoia em utilit�rios e vari�veis j� definidas em pagina_inicial.css
+(ex.: .container, .btn, .input, --space-*, --surface, etc.).
+*/
+
+
+/* =============================
+SE��O: FILTROS E BARRA DE BUSCA
+================================ */
+
+.mercado-filtros { 
+    padding-block: var(--space-5, 2rem); 
+}
+
+/* Wrapper principal dos filtros: t�tulo, busca e aside */
+.mercado-filtros-wrap {
+    display: grid;
+    grid-template-columns: 1fr; /* aside filtros | conte�do (t�tulo + busca) */
+    gap: 16px;
+}
+
+/* Filtro horizontal */
+.filtros-horizontais {
+  display: grid;
+  grid-template-columns: 1fr 200px 160px auto; /* input | estilo | formato | botão */
+  gap: 12px;
+  align-items: center;
+}
+
+
+
+
+/* Mobile: empilha */
+@media (max-width: 700px) {
+  .filtros-horizontais { grid-template-columns: 1fr; }
+}
+
+/* =============================
+Sessão Listagem de Albums
+================================ */
+.mercado-lista .card-produto-link {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 12px;
+}
+.mercado-lista-wrap { 
+    display: grid; 
+    gap: var(--space-3, 1rem); 
+}
+
+#titulo-mercado-lista { 
+    margin: 0; 
+}
+
+/* Grid de cards de albuns */
+.grid-albuns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3, 1rem);
+}
+
+@media (max-width: 1200px) {
+    .grid-albuns { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+@media (max-width: 880px) {
+    .grid-albuns { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media (max-width: 560px) {
+    .grid-albuns { 
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Card de produto (usa as mesmas classes da home, mas adaptado ao grid) */
+.card-produto { 
+    display: grid; 
+}
+.card-produto-link {
+    display: grid;
+    grid-template-rows: auto 1fr; /* imagem em cima, conte�do abaixo */
+    gap: var(--space-2, .75rem);
+    padding: var(--space-2, .75rem);
+}
+
+/* Imagem grande ocupando toda a largura do card */
+.mercado-lista .card-produto-imagem {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;   /* quadrado bonito */
+  object-fit: cover;     /* corta para preencher */
+  border-radius: 8px;
+}
+.card-produto-corpo { 
+    display: grid; 
+    gap: .35rem; 
+}
+
+
+/* área dos botões */
+.mercado-lista .produto-card-acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ambos ocupam toda a largura, lado a lado */
+.mercado-lista .produto-card-acoes .btn {
+  flex: 1 1 0;
+}
+
+/* mobile: empilha */
+@media (max-width: 420px) {
+  .mercado-lista .produto-card-acoes {
+    flex-direction: column;
+  }
+}
+
+/* =============================
+PAGINA��O
+================================ */
+.paginacao { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: var(--space-4, 1.5rem); 
+}
+.paginacao-lista { 
+    display: inline-flex; 
+    gap: .25rem; 
+}
+.paginacao-link { display: inline-block; 
+    padding: .5rem .8rem; 
+    border-radius: .5rem; 
+}
+.paginacao-link.ativo { 
+    font-weight: 700; 
+}

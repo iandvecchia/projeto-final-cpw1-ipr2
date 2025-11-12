@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Lib - Página do album</title>
+    <link rel="stylesheet" href="album.css">
+    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <link rel="stylesheet" href="assets/css/pages/disc.css" />
+</head>
+<body>
+
+   <!--Header/Navegação Principal: -->
+    <header>
+        <div class="cabecalho-site" role="banner">
+            <div class="container cabecalho-site" >
+                <a class="cabecalho-site-marca" href="pagina_inicial.html" aria-label="Pagina Inicial">
+                    <img src="assets/img/logos/logo.svg" alt="Logo do Music Lib" class="cabecalho-site-logo">
+                    <span class="cabecalho-site-title">A sua biblioteca de CDs e Vinis.</span>
+                </a>
+
+                <nav class="nav-site" aria-label="navegação entre páginas">
+                    <ul class="site-nav-list">
+                        <li><a class="site-nav-link ativo" href="pagina_inicial.html">Inicio</a></li>
+                        <li><a class="site-nav-link" href="mercado.html">Mercado</a></li>
+                        <li><a class="site-nav-link" href="colecao.html">Minha Coleção</a></li>
+                        <li><a class="site-nav-link" href="favoritos.html">Lista de Desejos</a></li>
+
+                    </ul>
+                </nav>
+
+                <div class="cabecalho-site-acoes">
+                    <a class="btn btn--ghost" href="login.html" aria-label="Entrar">Entrar</a>
+                    <a class="btn btn--primary" href="cart.html" aria-label="Ver Carrinho"> Carrinho</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="conteudo" class="site-main" tabindex="-1">
+
+    <!-- bloco hero do produto (imagem + infos + CTAs) -->
+    <section class="produto-hero" aria-labelledby="album-titulo">
+      <div class="container produto-hero-wrap">
+        <!-- Imagem do produto -->
+        <div class="produto-img">
+          <img src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo" class="produto-img-media" loading="lazy">
+        </div>
+
+        <!-- Informações principais -->
+        <div class="produto-info">
+          <h1 id="album-titulo" class="produto-titulo">Esse é o nome do produto</h1>
+          <p class="produto-meta">
+            Artista Exemplo • 2001 • BR • Gravadora Exemplo
+          </p>
+          <p class="produto-descricao">
+            Essa é a descrição do produto. Breve resumo com contexto, edição, estado e outros detalhes relevantes.
+          </p>
+
+          <div class="produto-acoes">
+            <button class="btn btn--primary">Adicionar à coleção</button>
+            <button class="btn btn--ghost">Adicionar aos favoritos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- grid de ofertas / lojas -->
+    <section class="produto-ofertas" aria-labelledby="ofertas-titulo">
+      <div class="container">
+        <h2 id="ofertas-titulo" class="titulo-secao">À venda em</h2>
+
+        <div class="lojas-grid">
+          <!-- Card de loja -->
+          <article class="loja-card">
+            <h3 class="loja-nome">Loja 1</h3>
+            <p class="loja-info">Formato: CD</p>
+            <p class="loja-preco">Valor: R$ 150,00</p>
+            <div class="loja-acoes">
+              <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Comprar</a>
+              <button class="btn btn--ghost">Adicionar ao carrinho</button>
+            </div>
+          </article>
+
+
+          <article class="loja-card">
+            <h3 class="loja-nome">Loja 2</h3>
+            <p class="loja-info">Formato: Vinil</p>
+            <p class="loja-preco">Valor: R$ 150,00</p>
+            <div class="loja-acoes">
+              <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Comprar</a>
+              <button class="btn btn--ghost">Adicionar ao carrinho</button>
+            </div>
+          </article>
+
+          <article class="loja-card">
+            <h3 class="loja-nome">Loja 3</h3>
+            <p class="loja-info">Formato: CD</p>
+            <p class="loja-preco">Valor: R$ 150,00</p>
+            <div class="loja-acoes">
+              <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Comprar</a>
+              <button class="btn btn--ghost">Adicionar ao carrinho</button>
+            </div>
+          </article>
+    
+    </section>
+
+    <!-- informações adicionais: faixas / notas / créditos -->
+    <section class="produto-detalhes" aria-labelledby="detalhes-titulo">
+      <div class="container produto-detalhes-grid">
+        <h2 id="detalhes-titulo" class="visually-hidden">Detalhes do álbum</h2>
+
+        <article class="produto-faixas" aria-labelledby="faixas-titulo">
+          <h3 id="faixas-titulo">Faixas</h3>
+          <ol class="faixas-lista">
+            <li>Faixa 1</li>
+            <li>Faixa 2</li>
+            <li>Faixa 3</li>
+            <li>Faixa 4</li>
+            <li>Faixa 5</li>
+            <li>Faixa 6</li>
+            <li>Faixa 7</li>
+            <li>Faixa 8</li>
+            <li>Faixa 9</li>
+            <li>Faixa 10</li>
+          </ol>
+        </article>
+
+        <article class="produto-notas" aria-labelledby="notas-titulo">
+          <h3 id="notas-titulo">Notas</h3>
+          <p>
+            Informações adicionais sobre prensagem, edição, encarte, número de catálogo, país, comentários do colecionador etc.
+          </p>
+        </article>
+
+        <article class="produto-creditos" aria-labelledby="creditos-titulo">
+          <h3 id="creditos-titulo">Créditos</h3>
+          <ul class="creditos-lista">
+            <li>Produtor: Nome Exemplo</li>
+            <li>Compositor: Nome Exemplo</li>
+            <li>Arranjos: Nome Exemplo</li>
+            <li>Gravadora: Gravadora Exemplo</li>
+          </ul>
+        </article>
+      </div>
+  </main>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--Rodapé-->
+    <footer class="site-footer" role="contentinfo" style="background-color: rgb(0, 0, 0);">
+        <div class="container site-footer-grid">
+            <section class="footer-col">
+                <h3 class="footer-col-titulo">Biblioteca de Discos</h3>
+                <p class="footer-col-texto">Sua plataforma para buscar, comprar e organizar coleções de CDs e Vinis</p>
+
+            </section>
+
+            <nav class="footer-col" aria-label="Links Uteis">
+                <h3 class="footer-col-titulo">Navegação</h3>
+                <ul class="footer-links">
+                    <li><a href="mercado.html">Mercado</a></li>
+                    <li><a href="colecao.html">Minha Coleção</a></li>
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-col">
+                <h3 class="footer-col-titulo">Contato</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+
+                </ul>
+            </section>
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <p class="site-footer-copy">@musiclib - <span data-js="year"></span> - IFRS</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
