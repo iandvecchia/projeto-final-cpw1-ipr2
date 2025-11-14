@@ -1,6 +1,5 @@
 /*
 Music Lib — pagina_inicial.css
-Objetivo: reposicionar/organizar o layout da página inicial.
 - Reset básico
 - Variáveis
 - Utilitários e .container
@@ -10,7 +9,7 @@ Objetivo: reposicionar/organizar o layout da página inicial.
 - Listas (mais vendidos / mais buscados / clássicos)
 - Newsletter
 - Footer
-Obs.: Mantém as cores-inline usadas no HTML para debugging; aqui focamos em layout.
+
 */
 
 /* =============================
@@ -120,7 +119,8 @@ button, input, select{
 }
 
 .btn--primary:hover {
-    filter: brightness(.95s);
+    background-color: #fff;
+    color: #000;
 }
 .btn--ghost {
     background: transparent;
@@ -176,6 +176,14 @@ header {
     font-size: 1rem;
     letter-spacing: .2px;
 }
+
+.cabecalho-site--fixo {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background-color: #fff; /* ou a cor que você quiser */
+
+}
+
+
 
 
 
@@ -274,17 +282,19 @@ MAIN / HERO
 }
 
 .hero .btn--primary:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #000;
+  color: #fff;
 }
 
 .hero .btn--ghost {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #000;
   border: 2px solid #fff;
-  color: #000000;
+  color: #fff;
 }
 
 .hero .btn--ghost:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #fff;
+  color: #000;
 }
 
 .hero-media img {
