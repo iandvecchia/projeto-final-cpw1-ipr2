@@ -120,14 +120,9 @@ button, input, select{
 }
 
 .btn--primary:hover {
-<<<<<<< HEAD
     filter: brightness(.95s);
     background-color: #fff;
     color:#000;
-=======
-    background-color: #fff;
-    color: #000;
->>>>>>> 948e29d629ca8ae7ec115d85da0f2b025f798558
 }
 .btn--ghost {
     background: transparent;
@@ -239,7 +234,7 @@ MAIN / HERO
 
 .hero{
 /* Banner de fundo */
-    background-image:url('/assets/img/banners/banner_home.jpg');
+    background-image:url('../../img/banners/banner_home.jpg');
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
