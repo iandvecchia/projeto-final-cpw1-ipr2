@@ -117,15 +117,19 @@ button, input, select{
 .btn--primary {
     background: var(--brand);
     color: var(--brand-ink);
+    cursor:pointer;
 }
 
 .btn--primary:hover {
     filter: brightness(.95s);
+    background-color: #fff;
+    color:#000;
 }
 .btn--ghost {
     background: transparent;
     border-color: var(--brand);
-    color: var(--brand)
+    color: var(--brand);
+    cursor: pointer;
 }
 
 .btn--ghost:hover { 
@@ -134,7 +138,7 @@ button, input, select{
 }
 
 .input {
-    width: 100%;
+    width: 800px;
     border: 1.5px solid #d9d9df;
     border-radius: .6rem;
     padding: .7rem .9rem;
@@ -313,18 +317,31 @@ BUSCA POR TIPO
 }
 
 .barra-busca {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: center;
     gap: var(--space-2);
     margin-bottom: var(--space-4);
 }
 
-.input-busca { /* mapeia .input-busca do HTML */ }
+/* agrupa input + botão na mesma linha */
+.barra-busca-group {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+/* largura do campo de busca quando dentro da barra */
+.barra-busca .input {
+    width: 550px;
+}
+
+
 
 .busca-tipos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-3)
+    gap: var(--space-3);
+    
 }
 
 .card {
@@ -332,6 +349,56 @@ BUSCA POR TIPO
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow-1);
+}
+
+/* Efeito hover / foco para cartões clicáveis */
+.card.card-action {
+    transition: box-shadow .18s ease, transform .12s ease;
+    will-change: transform, box-shadow;
+}
+.card.card-action:hover,
+.card.card-action:focus-within {
+    box-shadow: 0 10px 28px rgba(0,0,0,.14);
+    transform: translateY(-6px);
+}
+
+/* Efeito para links dos cards do carrossel/listas */
+.card-produto-link {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1);
+    overflow: hidden;
+    transition: box-shadow .18s ease, transform .12s ease;
+    will-change: transform, box-shadow;
+    
+}
+.card-produto-link:hover,
+.card-produto-link:focus-visible {
+    box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    transform: translateY(-6px) scale(1.01);
+}
+.card-produto-link:active {
+    transform: translateY(-2px) scale(1.005);
+}
+
+.card-produto-link .card-produto-imagem,
+.card-produto-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .18s ease;
+}
+.card-produto-link:hover .card-produto-imagem,
+.card-produto-link:focus-visible .card-produto-imagem {
+    transform: scale(1.03);
+}
+
+.card-produto-corpo {
+    padding: var(--space-3);
+    display: grid;
+    gap: .4rem;
 }
 .card-media img {
     aspect-ratio: 16/9;
@@ -355,13 +422,26 @@ BUSCA POR TIPO
     margin: 0;
 }
 
+.btn-card {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.card-produto-link:hover .btn-card {
+    cursor: pointer;
+    margin-top: 5px;
+    opacity: 1;
+}
+
 /*Responsividade do tipo*/
 @media (max-width: 960px) {
 .busca-tipos-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 620px) {
-.barra-busca { grid-template-columns: 1fr; }
-.busca-tipos-grid { grid-template-columns: 1fr; }
+    .barra-busca { flex-direction: column; align-items: center; }
+    .barra-busca-group { flex-direction: column; width: 100%; }
+    .barra-busca .input { width: 100%; }
+    .busca-tipos-grid { grid-template-columns: 1fr; }
 }
 
 /* =============================
@@ -371,33 +451,65 @@ LISTAS DESTAQUES
 
 
 
-/* === Carrossel simples === */
-.carrossel { position: relative; }
+/* =======================================================
+   Carrossel
+   ======================================================= */
 
-.carrossel-viewport { overflow: hidden; }
+.carrossel {
+  position: relative;
+  margin-top: 20px;
+}
+
+.carrossel-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carrossel-viewport::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
 
 .carrossel-trilha {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(240px, 280px); /* largura de cada card */
+  display: flex;
   gap: 16px;
-  padding: 8px 0 16px;
+  padding: 12px 4px;
 }
 
-/* botões laterais */
+.carrossel .card-produto {
+  flex: 0 0 260px; /* largura fixa estilo Discogs */
+  scroll-snap-align: start;
+}
+
+@media (max-width: 720px) {
+  .carrossel .card-produto {
+    flex: 0 0 70%;
+  }
+}
+
+.carrossel-viewport.dragging {
+  cursor: grabbing;
+}
+
+/* Botões laterais */
 .carrossel-botao {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
-  border: 1px solid #ccc;
-  background: #fff;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
-  width: 38px;
-  height: 38px;
+  border: none;
+  background: #fff;
+  box-shadow: var(--shadow-1);
   cursor: pointer;
 }
-.carrossel-botao.prev { left: -6px; }
-.carrossel-botao.next { right: -6px; }
+
+.carrossel-botao.prev { left: -10px; }
+.carrossel-botao.next { right: -10px; }
 
 /* indicadores (bolinhas) */
 .carrossel-indicadores {
@@ -482,9 +594,20 @@ LISTAS DESTAQUES
 
 .card-produto {
     background: #fff;
-    border: 1px solid #eee;
+    border: none;
     border-radius: .6rem;
     overflow: hidden;
+    box-shadow: var(--shadow-1);
+    transition: box-shadow .18s ease, transform .12s ease;
+    will-change: transform, box-shadow;
+}
+.card-produto:hover,
+.card-produto:focus-within {
+    box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    transform: translateY(-6px);
+}
+.card-produto:active {
+    transform: translateY(-2px);
 }
 .card-produto-link {
     display: grid;
@@ -504,6 +627,42 @@ LISTAS DESTAQUES
     display: grid;
     gap: .25rem;
 }
+
+/* Tornar a imagem do card quadrada e ajustar a grade do card */
+.carrossel .carrossel-trilha .card-produto {
+    display: block;
+}
+.carrossel .card-produto-link {
+    display: grid;
+    grid-template-rows: auto 1fr; /* imagem (auto) + corpo */
+    gap: 0;
+    height: auto;
+}
+.carrossel .carrossel-trilha .card-produto {
+    align-self: stretch;
+}
+.carrossel .carrossel-trilha .card-produto-link {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.carrossel .card-produto-link .card-produto-imagem,
+.carrossel .card-produto-link img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* força a imagem a ser quadrada */
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 720px) {
+    .carrossel .card-produto-link .card-produto-imagem,
+    .carrossel .card-produto-link img { aspect-ratio: 1 / 1; }
+}
+@media (max-width: 420px) {
+    .carrossel .card-produto-link .card-produto-imagem,
+    .carrossel .card-produto-link img { aspect-ratio: 1 / 1; }
+}
+
 
 .produto-card-titulo {
     margin: 0;
@@ -536,6 +695,7 @@ NEWSLETTER
 .newsletter {
     padding-block: var(--space-6);
     background-color: #948b8b;
+    margin-top: 70px;
 }
 .newsletter-wrap {
     display: grid;
@@ -573,6 +733,7 @@ FOOTER
 
 .site-footer { 
     color: #f0f0f0; 
+    margin-top: 50px;
 
 }
 

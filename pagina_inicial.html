@@ -43,12 +43,12 @@
          <section class="hero" aria-labelledby="hero-title"> <!--“Hero Section”, usada no design web para indicar o primeiro grande bloco visual que aparece no topo de uma página — normalmente logo abaixo do menu.-->
             <div class="container hero-wrap">
                 <div class="hero-conteudo">
-                    <h1 id="hero-titulo" class="hero-title">Sua biblioteca de CDS e Vinis.</h1>
+                    <h1 id="hero-titulo" class="hero-title">Sua biblioteca de CDs e Vinis.</h1>
                     <p class="hero-subtitulo"> Busque, compre e organize sua coleção - tudo em um só lugar.</p>
                 </div>
 
                 <div class="hero-acao">
-                    <a class="btn btn--primary" href="#busca">Comecar Agora</a>
+                    <a class="btn btn--primary" href="#busca">Começar Agora</a>
                     <a class="btn btn--ghost" href="mercado.html">Ir ao mercado</a>
                 </div>
             </div>
@@ -59,9 +59,11 @@
             <div class="container">
                 <h2 id="busca-tipos-titulo" class="sessao-titulo">Encontre o seu próximo disco: </h2>
                 <form class="barra-busca" role="busca" aria-label="busca rápida" data-js="quick-seach-form">
-                    <label for="q" class="visualizacao-escondida">Busca por artista album ou faixa.</label>
-                    <input id="q" name="q" class="input input-busca" type="busca" placeholder="Busca por artista album ou faixa." autocomplete="off"/>
-                    <button class="btn btn--primary" type="submit">Buscar</button>
+                
+                    <div class="barra-busca-group" style="display:inline-flex;gap:0.5rem;align-items:center;">
+                        <input id="q" name="q" class="input input-busca" type="search" placeholder="Busca por artista album ou faixa." autocomplete="off"/>
+                        <button class="btn btn--primary" type="submit">Buscar</button>
+                    </div>
                 </form>
 
                 <div class="busca-tipos-grid">
@@ -77,7 +79,7 @@
                         <div class="card-media"><img src="assets/img/banners/vinis.jpg" alt="vinis" loading="lazy"/></div>
                         <div class="card-corpo">
                             <h3 class="titlo-card">Busca por Vinis</h3>
-                            <p class="texto-card">Explore clássicos e coleções vintage.</p>
+                            <p class="texto-card">Explore clássicos e lançamentos.</p>
                         </div>
                     </a>
 
@@ -104,52 +106,104 @@
         
         <!-- viewport e trilha -->
         <div class="carrossel-viewport" tabindex="0">
-            <ul class="carrossel-trilha">
+            <div class="carrossel-trilha">
             <!-- Card 1 -->
             <li class="card-produto">
             <a class="card-produto-link" href="album.html?id=1">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
+            <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/4/4d/Master_of_Puppets.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
             <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 1</h4>
-                <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
+                <h4 class="produto-card-titulo">Master of Puppets</h4>
+                <p class="produto-card-meta">Metallica • 1986 • US</p>
                 <p class="produto-card-preco">Preço médio: R$ 79,90</p>
+                
             </div>
+            <button class="btn btn--primary btn-card">Comprar</button>
+            <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                
+            </a>
+            
+        </li>
+
+        <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=2">
+            <img class="card-produto-imagem" src="https://m.media-amazon.com/images/I/71ivOLeVPXL._UF1000,1000_QL80_.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">Bathory</h4>
+                <p class="produto-card-meta">Bathory • 1984 • SE</p>
+                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+            </div>
+            <button class="btn btn--primary btn-card">Comprar</button>
+            <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
             </a>
         </li>
 
         <li class="card-produto">
             <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/thumb/3/30/Michael_Jackson_-_Thriller.jpg/250px-Michael_Jackson_-_Thriller.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
             <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                <h4 class="produto-card-titulo">Thriller</h4>
+                <p class="produto-card-meta">Michael Jackson • 1982 • US</p>
+                <p class="produto-card-preco">Preço médio: R$ 149,90</p>
             </div>
+            <button class="btn btn--primary btn-card">Comprar</button>
+            <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
             </a>
         </li>
 
         <li class="card-produto">
             <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/3/3b/Dark_Side_of_the_Moon.png" alt="Capa do álbum Exemplo 2" loading="lazy" />
             <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                <h4 class="produto-card-titulo">The Dark Side of the Moon</h4>
+                <p class="produto-card-meta">Pink Floyd • 1973 • UK</p>
+                <p class="produto-card-preco">Preço médio: R$ 99,90</p>
             </div>
+            <button class="btn btn--primary btn-card">Comprar</button>
+            <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
             </a>
         </li>
 
         <li class="card-produto">
             <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/3/3b/Dark_Side_of_the_Moon.png" alt="Capa do álbum Exemplo 2" loading="lazy" />
             <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                <h4 class="produto-card-titulo">The Dark Side of the Moon</h4>
+                <p class="produto-card-meta">Pink Floyd • 1973 • UK</p>
+                <p class="produto-card-preco">Preço médio: R$ 99,90</p>
             </div>
+            <button class="btn btn--primary btn-card">Comprar</button>
+            <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
             </a>
         </li>
-        </ul>
+
+        <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=2">
+            <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/3/3b/Dark_Side_of_the_Moon.png" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">The Dark Side of the Moon</h4>
+                <p class="produto-card-meta">Pink Floyd • 1973 • UK</p>
+                <p class="produto-card-preco">Preço médio: R$ 99,90</p>
+
+            </div>
+            <button class="btn btn--primary btn-card">Comprar</button>
+            <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+            </a>
+            
+        </li>
+
+        <li class="card-produto">
+            <a class="card-produto-link" href="album.html?id=2">
+            <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/3/3b/Dark_Side_of_the_Moon.png" alt="Capa do álbum Exemplo 2" loading="lazy" />
+            <div class="card-produto-corpo">
+                <h4 class="produto-card-titulo">The Dark Side of the Moon</h4>
+                <p class="produto-card-meta">Pink Floyd • 1973 • UK</p>
+                <p class="produto-card-preco">Preço médio: R$ 99,90</p>
+            </div>
+            <button class="btn btn--primary btn-card">Comprar</button>
+            <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+            </a>
+        </li>
+    </div>
     </div>
 
     <!-- indicadores (bolinhas) -->
@@ -170,52 +224,98 @@
         
         <!-- viewport e trilha -->
         <div class="carrossel-viewport" tabindex="0">
-            <ul class="carrossel-trilha">
+            <div class="carrossel-trilha">
             <!-- Card 1 -->
             <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=1">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 1</h4>
-                <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
-                <p class="produto-card-preco">Preço médio: R$ 79,90</p>
-            </div>
-            </a>
-        </li>
+                <a class="card-produto-link" href="album.html?id=10">
+                    <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg" alt="Capa do álbum Abbey Road — The Beatles" loading="lazy" />
+                    <div class="card-produto-corpo">
+                        <h4 class="produto-card-titulo">Abbey Road</h4>
+                        <p class="produto-card-meta">The Beatles • 1969 • UK</p>
+                        <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                    </div>
+                    <button class="btn btn--primary btn-card">Comprar</button>
+                    <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                </a>
+            </li>
 
- 
-        <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
-            </div>
-            </a>
-        </li>
+            <li class="card-produto">
+                <a class="card-produto-link" href="album.html?id=11">
+                    <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" alt="Capa do álbum The Dark Side of the Moon — Pink Floyd" loading="lazy" />
+                    <div class="card-produto-corpo">
+                        <h4 class="produto-card-titulo">The Dark Side of the Moon</h4>
+                        <p class="produto-card-meta">Pink Floyd • 1973 • UK</p>
+                        <p class="produto-card-preco">Preço médio: R$ 149,90</p>
+                    </div>
+                    <button class="btn btn--primary btn-card">Comprar</button>
+                    <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                </a>
+            </li>
 
-        <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
-            </div>
-            </a>
-        </li>
+            <li class="card-produto">
+                <a class="card-produto-link" href="album.html?id=12">
+                    <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/4/4b/LedZeppelinIV.jpg" alt="Capa do álbum Led Zeppelin IV — Led Zeppelin" loading="lazy" />
+                    <div class="card-produto-corpo">
+                        <h4 class="produto-card-titulo">Led Zeppelin IV</h4>
+                        <p class="produto-card-meta">Led Zeppelin • 1971 • UK</p>
+                        <p class="produto-card-preco">Preço médio: R$ 139,90</p>
+                    </div>
+                    <button class="btn btn--primary btn-card">Comprar</button>
+                    <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                </a>
+            </li>
 
-        <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
-            </div>
-            </a>
-        </li>
+            <li class="card-produto">
+                <a class="card-produto-link" href="album.html?id=13">
+                    <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg" alt="Capa do álbum Nevermind — Nirvana" loading="lazy" />
+                    <div class="card-produto-corpo">
+                        <h4 class="produto-card-titulo">Nevermind</h4>
+                        <p class="produto-card-meta">Nirvana • 1991 • US</p>
+                        <p class="produto-card-preco">Preço médio: R$ 119,90</p>
+                    </div>
+                    <button class="btn btn--primary btn-card">Comprar</button>
+                    <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                </a>
+            </li>
+
+            <li class="card-produto">
+                <a class="card-produto-link" href="album.html?id=13">
+                    <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg" alt="Capa do álbum Nevermind — Nirvana" loading="lazy" />
+                    <div class="card-produto-corpo">
+                        <h4 class="produto-card-titulo">Nevermind</h4>
+                        <p class="produto-card-meta">Nirvana • 1991 • US</p>
+                        <p class="produto-card-preco">Preço médio: R$ 119,90</p>
+                    </div>
+                    <button class="btn btn--primary btn-card">Comprar</button>
+                    <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                </a>
+            </li>
+
+            <li class="card-produto">
+                <a class="card-produto-link" href="album.html?id=13">
+                    <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg" alt="Capa do álbum Nevermind — Nirvana" loading="lazy" />
+                    <div class="card-produto-corpo">
+                        <h4 class="produto-card-titulo">Nevermind</h4>
+                        <p class="produto-card-meta">Nirvana • 1991 • US</p>
+                        <p class="produto-card-preco">Preço médio: R$ 119,90</p>
+                    </div>
+                    <button class="btn btn--primary btn-card">Comprar</button>
+                    <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                </a>
+            </li>
+
+            <li class="card-produto">
+                <a class="card-produto-link" href="album.html?id=13">
+                    <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg" alt="Capa do álbum Nevermind — Nirvana" loading="lazy" />
+                    <div class="card-produto-corpo">
+                        <h4 class="produto-card-titulo">Nevermind</h4>
+                        <p class="produto-card-meta">Nirvana • 1991 • US</p>
+                        <p class="produto-card-preco">Preço médio: R$ 119,90</p>
+                    </div>
+                    <button class="btn btn--primary btn-card">Comprar</button>
+                    <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                </a>
+            </li>
 
         <!-- ...outros itens -->
         </ul>
@@ -238,49 +338,103 @@
         
         <!-- viewport e trilha -->
         <div class="carrossel-viewport" tabindex="0">
-            <ul class="carrossel-trilha">
-            <!-- Card 1 -->
-            <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=1">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 1" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 1</h4>
-                <p class="produto-card-meta">Artista Exemplo • 2001 • BR</p>
-                <p class="produto-card-preco">Preço médio: R$ 79,90</p>
-            </div>
-            </a>
-        </li>
+            <div class="carrossel-trilha">
+                <!-- Thriller -->
+                <li class="card-produto">
+                    <a class="card-produto-link" href="album.html?id=rumours">
+                        <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/f/fb/FMacRumours.PNG" alt="Capa do álbum Rumours — Fleetwood Mac" loading="lazy" />
+                        <div class="card-produto-corpo">
+                            <h4 class="produto-card-titulo">Rumours</h4>
+                            <p class="produto-card-meta">Fleetwood Mac • 1977 • UK/US</p>
+                            <p class="produto-card-preco">Preço médio: R$ 109,90</p>
+                        </div>
+                        <button class="btn btn--primary btn-card">Comprar</button>
+                        <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                    </a>
+                </li>
 
-        
-        <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
-            </div>
-            </a>
-        </li>
+                <li class="card-produto">
+                    <a class="card-produto-link" href="album.html?id=back-in-black">
+                        <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/b/b6/Back_in_Black.jpg" alt="Capa do álbum Back in Black — AC/DC" loading="lazy" />
+                        <div class="card-produto-corpo">
+                            <h4 class="produto-card-titulo">Back in Black</h4>
+                            <p class="produto-card-meta">AC/DC • 1980 • AU</p>
+                            <p class="produto-card-preco">Preço médio: R$ 99,90</p>
+                        </div>
+                        <button class="btn btn--primary btn-card">Comprar</button>
+                        <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                    </a>
+                </li>
 
-        <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
-            </div>
-            </a>
-        </li>
+                <li class="card-produto">
+                    <a class="card-produto-link" href="album.html?id=hotel-california">
+                        <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg" alt="Capa do álbum Hotel California — Eagles" loading="lazy" />
+                        <div class="card-produto-corpo">
+                            <h4 class="produto-card-titulo">Hotel California</h4>
+                            <p class="produto-card-meta">Eagles • 1976 • US</p>
+                            <p class="produto-card-preco">Preço médio: R$ 119,90</p>
+                        </div>
+                        <button class="btn btn--primary btn-card">Comprar</button>
+                        <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                    </a>
+                </li>
 
-        <li class="card-produto">
-            <a class="card-produto-link" href="album.html?id=2">
-            <img class="card-produto-imagem" src="assets/img/albuns/guns.jpg" alt="Capa do álbum Exemplo 2" loading="lazy" />
-            <div class="card-produto-corpo">
-                <h4 class="produto-card-titulo">Álbum Exemplo 2</h4>
-                <p class="produto-card-meta">Artista Exemplo • 1999 • US</p>
-                <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                <li class="card-produto">
+                    <a class="card-produto-link" href="album.html?id=kind-of-blue">
+                        <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/0/04/A1437070184784091709.png" alt="Capa do álbum Kind of Blue — Miles Davis" loading="lazy" />
+                        <div class="card-produto-corpo">
+                            <h4 class="produto-card-titulo">Kind of Blue</h4>
+                            <p class="produto-card-meta">Miles Davis • 1959 • US</p>
+                            <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                        </div>
+                        <button class="btn btn--primary btn-card">Comprar</button>
+                        <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                    </a>
+                </li>
+
+                <li class="card-produto">
+                    <a class="card-produto-link" href="album.html?id=kind-of-blue">
+                        <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/0/04/A1437070184784091709.png" alt="Capa do álbum Kind of Blue — Miles Davis" loading="lazy" />
+                        <div class="card-produto-corpo">
+                            <h4 class="produto-card-titulo">Kind of Blue</h4>
+                            <p class="produto-card-meta">Miles Davis • 1959 • US</p>
+                            <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                        </div>
+                        <button class="btn btn--primary btn-card">Comprar</button>
+                        <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                    </a>
+                </li>
+
+                <li class="card-produto">
+                    <a class="card-produto-link" href="album.html?id=kind-of-blue">
+                        <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/0/04/A1437070184784091709.png" alt="Capa do álbum Kind of Blue — Miles Davis" loading="lazy" />
+                        <div class="card-produto-corpo">
+                            <h4 class="produto-card-titulo">Kind of Blue</h4>
+                            <p class="produto-card-meta">Miles Davis • 1959 • US</p>
+                            <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                        </div>
+                        <button class="btn btn--primary btn-card">Comprar</button>
+                        <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                    </a>
+                </li>
+
+                <li class="card-produto">
+                    <a class="card-produto-link" href="album.html?id=kind-of-blue">
+                        <img class="card-produto-imagem" src="https://upload.wikimedia.org/wikipedia/pt/0/04/A1437070184784091709.png" alt="Capa do álbum Kind of Blue — Miles Davis" loading="lazy" />
+                        <div class="card-produto-corpo">
+                            <h4 class="produto-card-titulo">Kind of Blue</h4>
+                            <p class="produto-card-meta">Miles Davis • 1959 • US</p>
+                            <p class="produto-card-preco">Preço médio: R$ 129,90</p>
+                        </div>
+                        <button class="btn btn--primary btn-card">Comprar</button>
+                        <button class="btn btn--ghost btn-card">Adicionar aos Favoritos</button>
+                    </a>
+                </li>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
             </div>
             </a>
         </li>
